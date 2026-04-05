@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FFFFF0] dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300;
+  }
+}
+
+/* --- Smooth Mount Animations --- */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.25s; }
+.stagger-3 { animation-delay: 0.4s; }
+
+/* --- Brand Logo Animation --- */
+.dynamic-logo-text {
+  background: linear-gradient(to right, #10b981, #3b82f6, #8b5cf6, #10b981);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: dynamic-colors 5s linear infinite;
+  /* Reflection */
+  -webkit-box-reflect: below -6px linear-gradient(transparent 40%, rgba(255,255,255,0.4));
+  padding-bottom: 5px; /* space for reflection */
+}
+
+html.dark .dynamic-logo-text {
+  -webkit-box-reflect: below -6px linear-gradient(transparent 40%, rgba(255,255,255,0.25));
+}
+
+.logo-flicker-wrapper {
+  animation: neon-flicker 4s infinite alternate;
+}
+
+@keyframes dynamic-colors {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+      filter: blur(0px) drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+  }
+  20%, 24%, 55% {
+      opacity: 0.5;
+      filter: blur(1px) drop-shadow(0 0 0px rgba(59, 130, 246, 0));
+  }
+}
+
+/* --- Typewriter Animation --- */
+@keyframes typewriterLetter {
+  0% { opacity: 0; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-typewriter-letter {
+  animation: typewriterLetter 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
