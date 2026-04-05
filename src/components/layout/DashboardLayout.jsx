@@ -75,7 +75,11 @@ const SidebarContent = ({
     className={`flex flex-col h-full bg-[#FDFBF7] dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 transition-colors duration-300 overflow-y-auto overflow-x-hidden`}
   >
     {/* Logo */}
-    <div className={`flex items-center shrink-0 transition-all duration-300 ${collapsed ? "justify-center p-4 mb-4" : "p-6 space-x-3 mb-6"}`}>
+    <button 
+      className={`w-full flex items-center shrink-0 transition-all duration-300 hover:opacity-80 focus:outline-none ${collapsed ? "justify-center p-4 mb-4" : "p-6 space-x-3 mb-6"}`}
+      onClick={() => { setActiveTab("Dashboard"); if (setIsMobileOpen) setIsMobileOpen(false); }}
+      title="Go to Dashboard"
+    >
       <div className="bg-emerald-800 p-2 rounded-xl shadow-sm shrink-0">
         <HandCoins className="w-5 h-5 text-yellow-400" />
       </div>
@@ -86,7 +90,7 @@ const SidebarContent = ({
           </span>
         </div>
       )}
-    </div>
+    </button>
 
     {/* Nav */}
     <nav className="flex-none px-2 space-y-1 mb-4">
@@ -131,7 +135,7 @@ const SidebarContent = ({
     <div className={`mt-auto flex-none border-t border-slate-200 dark:border-slate-800 transition-all duration-300 ${collapsed ? "p-2" : "p-4"}`}>
       {/* Logout Button */}
       <button
-        onClick={() => console.log("Logout clicked")}
+        onClick={() => setModal("logout")}
         title={collapsed ? "Log Out" : ""}
         className={`w-full flex items-center rounded-xl px-4 py-3 transition-all duration-300 active:scale-95 text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/20 font-semibold mb-2 ${collapsed ? "justify-center" : "space-x-3"}`}
       >
@@ -375,12 +379,15 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
 
         {/* Mobile header */}
         <header className="md:hidden bg-[#FFFFF0] dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 h-16 flex items-center px-4 shrink-0 justify-between transition-colors duration-300">
-          <div className="flex items-center space-x-2 font-bold text-slate-800 dark:text-slate-100">
+          <button 
+            onClick={() => setActiveTab("Dashboard")}
+            className="flex items-center space-x-2 font-bold text-slate-800 dark:text-slate-100 hover:opacity-80 transition-opacity focus:outline-none"
+          >
             <HandCoins className="w-6 h-6 text-emerald-800" />
             <div className="logo-flicker-wrapper inline-block">
               <span className="dynamic-logo-text">FINDASH</span>
             </div>
-          </div>
+          </button>
           <button
             onClick={() => setIsMobileOpen(true)}
             className="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition"
@@ -493,6 +500,25 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
                     </div>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {modal === "logout" && (
+              <div className="space-y-4 text-center pb-2">
+                <div className="w-16 h-16 bg-rose-100 dark:bg-rose-900/40 rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                  <div className="absolute inset-0 rounded-full border-2 border-rose-400 border-dashed animate-spin-slow"></div>
+                  <LogOut className="w-8 h-8 text-rose-600 dark:text-rose-400 relative z-10" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">Feature In Progress</h3>
+                <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 max-w-[280px] mx-auto">
+                  Just to let you know, this app is purely a frontend showcase! The backend authentication features (like Logging Out) are not yet developed. Feel free to hold tight as this functionality will be built in the future.
+                </p>
+                <button 
+                  onClick={() => setModal(null)} 
+                  className="w-full bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-bold py-3 px-4 rounded-xl transition duration-200"
+                >
+                  Got it, thanks!
+                </button>
               </div>
             )}
           </div>

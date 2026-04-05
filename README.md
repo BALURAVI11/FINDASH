@@ -57,7 +57,7 @@ npm run dev
 
 The app will open at **http://localhost:5173** (Vite default).
 
-> **Note:** Currently, no backend or database is attached. All data is generated from mock transactions and persisted securely in the browser's `localStorage` for immediate usability.
+> **Note:** Currently, no backend or database is attached. All data is generated from mock transactions and persisted securely in the browser's `localStorage` for immediate usability. **For effective information and to showcase my work, I added mock data spanning continuously up to April 2026.**
 
 ---
 
