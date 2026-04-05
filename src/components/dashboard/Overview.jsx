@@ -12,8 +12,8 @@ export const Overview = ({ setActiveTab }) => {
 
   // Global Dashboard Filter State (Defaulting to March 2026 for data visibility)
   const [dashViewMode, setDashViewMode] = useState('Month');
-  const defaultDay = '2026-03-31';
-  const defaultMonth = '2026-03';
+  const defaultDay = '2026-04-06';
+  const defaultMonth = '2026-04';
   const defaultYear = '2026';
 
   const [dashDay, setDashDay] = useState(defaultDay);
@@ -59,11 +59,7 @@ export const Overview = ({ setActiveTab }) => {
   }, [filteredTransactions]);
 
   const handlePieClick = (data) => {
-    // Interactive Charts Routing bridging pie piece right to table!
-    if (data && data.name && setActiveTab) {
-      setPieCategoryFilter(data.name);
-      setActiveTab("Transactions");
-    }
+    // Navigational click interaction explicitly removed per user request.
   };
 
   return (
@@ -189,8 +185,7 @@ export const Overview = ({ setActiveTab }) => {
                         <Cell
                           key={`cell-${index}`}
                           fill={COLORS[index % COLORS.length]}
-                          className="cursor-pointer hover:opacity-80 transition-opacity outline-none"
-                          onClick={() => handlePieClick(entry)}
+                          className="hover:opacity-80 transition-opacity outline-none"
                         />
                       ))}
                     </Pie>
@@ -225,8 +220,7 @@ export const Overview = ({ setActiveTab }) => {
                     {expensesByCategory.map((item, index) => (
                       <tr
                         key={index}
-                        className="group/row hover:bg-white dark:hover:bg-slate-800 transition-colors cursor-pointer"
-                        onClick={() => handlePieClick(item)}
+                        className="group/row hover:bg-white dark:hover:bg-slate-800 transition-colors"
                       >
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-2">

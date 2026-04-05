@@ -33,10 +33,10 @@ const deDuplicateTransactions = (data) => {
   });
 };
 
-// Generate Historical Mock Data specifically from Jan 2024 to Mar 2026
+// Generate Historical Mock Data specifically from Jan 2024 to Apr 2026
 const generateHistoricalData = () => {
   const start = new Date('2024-01-01');
-  const end = new Date('2026-03-31');
+  const end = new Date('2026-04-30');
   const tx = [];
   let id = 1;
   
@@ -65,33 +65,59 @@ const generateHistoricalData = () => {
     
     if (!isExcluded2024 && !isExcluded2025) {
       const daysInMonth = new Date(year, month + 1, 0).getDate();
-      const usedDays = new Set();
       
-      cycleTemplate.forEach(item => {
-        // Find a unique random day within the month
-        let randomDay;
-        let attempts = 0;
-        do {
-          randomDay = Math.floor(Math.random() * daysInMonth) + 1;
-          attempts++;
-        } while (usedDays.has(randomDay) && attempts < 50); // safety break
-        
-        usedDays.add(randomDay);
-        
-        const d = new Date(year, month, randomDay, 12, 0, 0); 
-        if (d >= start && d <= end) {
-          const variance = 1 + (month % 4 - 1.5) * 0.15; 
-          const amount = item.type === 'expense' ? Math.round(item.amt * variance) : item.amt;
-          
-          tx.push({
-            id: (id++).toString(),
-            date: d.toISOString().split('T')[0],
-            amount,
-            category: item.cat,
-            type: item.type
-          });
+      // Strict requirement: March (month 2) and April (month 3) 2026 get everyday records
+      if (year === 2026 && (month === 2 || month === 3)) {
+        for (let day = 1; day <= daysInMonth; day++) {
+          const d = new Date(year, month, day, 12, 0, 0);
+          if (d >= start && d <= end) {
+            // Random income for every date
+            tx.push({
+              id: (id++).toString(),
+              date: d.toISOString().split('T')[0],
+              amount: Math.floor(Math.random() * 500) + 150,
+              category: "Salary",
+              type: "income"
+            });
+            // Random expense for every date
+            tx.push({
+              id: (id++).toString(),
+              date: d.toISOString().split('T')[0],
+              amount: Math.floor(Math.random() * 200) + 20,
+              category: ["Groceries", "Transport", "Dining", "Utilities", "Rent"][Math.floor(Math.random()*5)],
+              type: "expense"
+            });
+          }
         }
-      });
+      } else {
+        const usedDays = new Set();
+        
+        cycleTemplate.forEach(item => {
+          // Find a unique random day within the month
+          let randomDay;
+          let attempts = 0;
+          do {
+            randomDay = Math.floor(Math.random() * daysInMonth) + 1;
+            attempts++;
+          } while (usedDays.has(randomDay) && attempts < 50); // safety break
+          
+          usedDays.add(randomDay);
+          
+          const d = new Date(year, month, randomDay, 12, 0, 0); 
+          if (d >= start && d <= end) {
+            const variance = 1 + (month % 4 - 1.5) * 0.15; 
+            const amount = item.type === 'expense' ? Math.round(item.amt * variance) : item.amt;
+            
+            tx.push({
+              id: (id++).toString(),
+              date: d.toISOString().split('T')[0],
+              amount,
+              category: item.cat,
+              type: item.type
+            });
+          }
+        });
+      }
     }
     // Advance 1 month
     curr.setMonth(curr.getMonth() + 1);
@@ -106,7 +132,8 @@ const DEFAULT_BUDGETS = {
   "2025-12": { "Groceries": 300, "Dining": 150 },
   "2026-01": { "Transport": 30, "Rent": 1600 },
   "2026-02": { "Transport": 60, "Utilities": 150 },
-  "2026-03": { "Groceries": 250, "Dining": 200 }
+  "2026-03": { "Groceries": 1500, "Dining": 1200, "Transport": 800, "Utilities": 600, "Rent": 3000 },
+  "2026-04": { "Groceries": 1800, "Dining": 1500, "Transport": 900, "Utilities": 700, "Rent": 3200 }
 };
 
 export const FinanceProvider = ({ children }) => {
@@ -151,8 +178,8 @@ export const FinanceProvider = ({ children }) => {
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 800));
       
-      const savedTx = localStorage.getItem("dashboard_transactions_v2");
-      const savedBudgets = localStorage.getItem("dashboard_budgets_v3");
+      const savedTx = localStorage.getItem("dashboard_transactions_v3");
+      const savedBudgets = localStorage.getItem("dashboard_budgets_v4");
       
       if (savedTx) {
         const parsedTx = JSON.parse(savedTx);
@@ -176,8 +203,8 @@ export const FinanceProvider = ({ children }) => {
   // Persist transactions to localStorage
   useEffect(() => {
     if (!isLoading) {
-      localStorage.setItem("dashboard_transactions_v2", JSON.stringify(transactions));
-      localStorage.setItem("dashboard_budgets_v3", JSON.stringify(budgets));
+      localStorage.setItem("dashboard_transactions_v3", JSON.stringify(transactions));
+      localStorage.setItem("dashboard_budgets_v4", JSON.stringify(budgets));
     }
   }, [transactions, budgets, isLoading]);
 
