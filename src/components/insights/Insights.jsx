@@ -70,6 +70,9 @@ export const Insights = () => {
   const customInitialStart = new Date(new Date().setMonth(new Date().getMonth() - 2)).toISOString().slice(0, 7);
   const [customStartMonth, setCustomStartMonth] = useState(customInitialStart);
   const [customEndMonth, setCustomEndMonth] = useState(currentInitialMonth);
+  const [customRangeType, setCustomRangeType] = useState('month');
+  const [customStartYear, setCustomStartYear] = useState(() => (new Date().getFullYear() - 1).toString());
+  const [customEndYear, setCustomEndYear] = useState(() => new Date().getFullYear().toString());
 
   const periodicExpenses = useMemo(() => {
     return expenses.filter(t => {
@@ -230,40 +233,57 @@ export const Insights = () => {
   }, [expenses, comparisonType, comparisonMonth, comparisonYear, periodicExpenses]);
 
   const customRangeData = useMemo(() => {
-    if (!customStartMonth || !customEndMonth || customStartMonth > customEndMonth) return [];
+    if (customRangeType === 'month') {
+      if (!customStartMonth || !customEndMonth || customStartMonth > customEndMonth) return [];
+    } else {
+      if (!customStartYear || !customEndYear || customStartYear > customEndYear) return [];
+    }
     
     const filtered = transactions.filter(t => {
-      const tMonth = t.date.slice(0, 7);
-      return tMonth >= customStartMonth && tMonth <= customEndMonth;
+      if (customRangeType === 'month') {
+        const tMonth = t.date.slice(0, 7);
+        return tMonth >= customStartMonth && tMonth <= customEndMonth;
+      } else {
+        const tYear = t.date.slice(0, 4);
+        return tYear >= customStartYear && tYear <= customEndYear;
+      }
     });
 
     const groups = {};
     filtered.forEach(t => {
-      const tMonth = t.date.slice(0, 7);
-      const key = `${tMonth}-${t.type}-${t.category}`;
-      if (!groups[key]) {
-        const [y, m] = tMonth.split('-');
-        const dateObj = new Date(parseInt(y), parseInt(m) - 1, 1);
-        const monthName = dateObj.toLocaleString('default', { month: 'long', year: 'numeric' });
-        
-        groups[key] = {
-          id: key,
-          dateStr: tMonth,
-          monthName,
-          category: t.category,
-          amount: 0,
-          type: t.type
-        };
+      if (customRangeType === 'month') {
+        const tMonth = t.date.slice(0, 7);
+        if (!groups[tMonth]) {
+          const [y, m] = tMonth.split('-');
+          const dateObj = new Date(parseInt(y), parseInt(m) - 1, 1);
+          groups[tMonth] = {
+            id: tMonth,
+            sortKey: tMonth,
+            label: dateObj.toLocaleString('default', { month: 'long', year: 'numeric' }),
+            income: 0,
+            expense: 0
+          };
+        }
+        if (t.type === 'income') groups[tMonth].income += Number(t.amount);
+        else groups[tMonth].expense += Number(t.amount);
+      } else {
+        const tYear = t.date.slice(0, 4);
+        if (!groups[tYear]) {
+          groups[tYear] = {
+            id: tYear,
+            sortKey: tYear,
+            label: tYear,
+            income: 0,
+            expense: 0
+          };
+        }
+        if (t.type === 'income') groups[tYear].income += Number(t.amount);
+        else groups[tYear].expense += Number(t.amount);
       }
-      groups[key].amount += Number(t.amount);
     });
 
-    return Object.values(groups).sort((a, b) => {
-      if (a.dateStr !== b.dateStr) return b.dateStr.localeCompare(a.dateStr); 
-      if (a.type !== b.type) return a.type.localeCompare(b.type); 
-      return b.amount - a.amount;
-    });
-  }, [transactions, customStartMonth, customEndMonth]);
+    return Object.values(groups).sort((a, b) => b.sortKey.localeCompare(a.sortKey));
+  }, [transactions, customStartMonth, customEndMonth, customRangeType, customStartYear, customEndYear]);
 
   return (
     <div className="relative space-y-8 animate-slide-up stagger-1 mb-10 z-10">
@@ -500,27 +520,64 @@ export const Insights = () => {
             </h3>
 
             {/* Range Controls */}
-            <div className="flex items-center gap-2 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-1.5 rounded-xl">
-              <input 
-                type="month" 
-                value={customStartMonth}
-                onChange={(e) => setCustomStartMonth(e.target.value)}
-                className="px-2 py-1 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none w-[130px] [color-scheme:light] dark:[color-scheme:dark]"
-              />
-              <span className="text-slate-400 dark:text-slate-500 font-bold px-1 text-sm">to</span>
-              <input 
-                type="month" 
-                value={customEndMonth}
-                onChange={(e) => setCustomEndMonth(e.target.value)}
-                className="px-2 py-1 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none w-[130px] [color-scheme:light] dark:[color-scheme:dark]"
-              />
+            <div className="flex items-center gap-3">
+              <select 
+                value={customRangeType} 
+                onChange={(e) => setCustomRangeType(e.target.value)}
+                className="px-3 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 outline-none focus:border-indigo-500 transition-colors"
+              >
+                <option value="month">Month-by-Month</option>
+                <option value="year">Year-by-Year</option>
+              </select>
+
+              <div className="flex items-center gap-2 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-1.5 rounded-xl">
+                {customRangeType === 'month' ? (
+                  <>
+                    <input 
+                      type="month" 
+                      value={customStartMonth}
+                      onChange={(e) => setCustomStartMonth(e.target.value)}
+                      className="px-2 py-1 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none w-[130px] [color-scheme:light] dark:[color-scheme:dark]"
+                    />
+                    <span className="text-slate-400 dark:text-slate-500 font-bold px-1 text-sm">to</span>
+                    <input 
+                      type="month" 
+                      value={customEndMonth}
+                      onChange={(e) => setCustomEndMonth(e.target.value)}
+                      className="px-2 py-1 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none w-[130px] [color-scheme:light] dark:[color-scheme:dark]"
+                    />
+                  </>
+                ) : (
+                  <>
+                    <input 
+                      type="number" 
+                      placeholder="YYYY"
+                      min="2000"
+                      max="2100"
+                      value={customStartYear}
+                      onChange={(e) => setCustomStartYear(e.target.value)}
+                      className="px-2 py-1 w-20 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none [color-scheme:light] dark:[color-scheme:dark]"
+                    />
+                    <span className="text-slate-400 dark:text-slate-500 font-bold px-1 text-sm">to</span>
+                    <input 
+                      type="number" 
+                      placeholder="YYYY"
+                      min="2000"
+                      max="2100"
+                      value={customEndYear}
+                      onChange={(e) => setCustomEndYear(e.target.value)}
+                      className="px-2 py-1 w-20 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none [color-scheme:light] dark:[color-scheme:dark]"
+                    />
+                  </>
+                )}
+              </div>
             </div>
           </div>
 
-          {customStartMonth > customEndMonth ? (
+          {(customRangeType === 'month' && customStartMonth > customEndMonth) || (customRangeType === 'year' && customStartYear > customEndYear) ? (
              <div className="bg-rose-50 dark:bg-rose-900/20 py-8 rounded-xl border border-rose-100 dark:border-rose-800/30 flex items-center justify-center text-center">
                <p className="text-rose-700 dark:text-rose-500 font-semibold text-sm">
-                 Invalid range: "From" month cannot be after "To" month.
+                 Invalid range: "From" {customRangeType} cannot be after "To" {customRangeType}.
                </p>
              </div>
           ) : customRangeData.length === 0 ? (
@@ -535,27 +592,32 @@ export const Insights = () => {
                 <table className="w-full text-left text-sm relative">
                   <thead className="bg-slate-100 dark:bg-slate-900 sticky top-0 z-10 shadow-sm">
                     <tr>
-                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider">Month</th>
-                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider">Category</th>
-                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider text-right">Amount</th>
+                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider">
+                        {customRangeType === 'month' ? 'Month' : 'Year'}
+                      </th>
+                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider text-right">Total Income</th>
+                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider text-right">Total Expense</th>
+                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider text-right">Net Margin</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 dark:divide-slate-800/80 text-slate-700 dark:text-slate-300">
-                    {customRangeData.map((row) => (
-                      <tr key={row.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
-                        <td className="px-5 py-3.5 font-semibold text-slate-800 dark:text-slate-200">{row.monthName}</td>
-                        <td className="px-5 py-3.5 font-medium flex items-center gap-2">
-                          <span className={`w-2 h-2 rounded-full ${row.type === 'expense' ? 'bg-rose-400' : 'bg-emerald-400'}`}></span>
-                          {row.category}
-                          <span className="text-[10px] uppercase font-bold text-slate-400 ml-1 tracking-wider">
-                            ({row.type})
-                          </span>
-                        </td>
-                        <td className={`px-5 py-3.5 text-right font-bold ${row.type === 'expense' ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
-                          {row.type === 'income' ? '+' : '-'}${row.amount.toLocaleString()}
-                        </td>
-                      </tr>
-                    ))}
+                    {customRangeData.map((row) => {
+                      const margin = row.income - row.expense;
+                      return (
+                        <tr key={row.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                          <td className="px-5 py-3.5 font-semibold text-slate-800 dark:text-slate-200">{row.label}</td>
+                          <td className="px-5 py-3.5 text-right font-bold text-emerald-600 dark:text-emerald-400">
+                            ${row.income.toLocaleString()}
+                          </td>
+                          <td className="px-5 py-3.5 text-right font-bold text-rose-600 dark:text-rose-400">
+                            ${row.expense.toLocaleString()}
+                          </td>
+                          <td className={`px-5 py-3.5 text-right font-bold ${margin >= 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+                            {margin > 0 ? '+' : ''}${margin.toLocaleString()}
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
