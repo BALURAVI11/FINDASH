@@ -6,6 +6,7 @@ A production-grade, feature-rich personal finance dashboard built with **React**
 
 ## 📋 Table of Contents
 
+- [🚀 Live Demo](#-live-demo)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Project Status & Upcoming Backend Features](#project-status--upcoming-backend-features)
@@ -24,6 +25,13 @@ A production-grade, feature-rich personal finance dashboard built with **React**
   - [12. Premium GUI Effects & Animations](#12-premium-gui-effects--animations)
 - [Design Philosophy](#design-philosophy)
 - [Tech Stack](#tech-stack)
+
+---
+
+## 🚀 Live Demo
+
+This application is officially deployed and hosted on **Vercel**. Check it out live here:
+👉 **[https://findash-5yksgh9xk-baluravi11s-projects.vercel.app/](https://findash-5yksgh9xk-baluravi11s-projects.vercel.app/)**
 
 ---
 
