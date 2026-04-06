@@ -3,1003 +3,1010 @@
     {
       "id": "317",
       "date": "2026-04-29",
-      "amount": 244,
+      "amount": 210,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "318",
       "date": "2026-04-29",
-      "amount": 166,
-      "category": "Utilities",
+      "amount": 45,
+      "category": "Transport",
       "type": "expense"
     },
     {
       "id": "315",
       "date": "2026-04-28",
-      "amount": 624,
+      "amount": 462,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "316",
       "date": "2026-04-28",
-      "amount": 168,
-      "category": "Transport",
+      "amount": 210,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "313",
       "date": "2026-04-27",
-      "amount": 635,
+      "amount": 438,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "314",
       "date": "2026-04-27",
-      "amount": 90,
+      "amount": 191,
       "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "311",
       "date": "2026-04-26",
-      "amount": 199,
+      "amount": 429,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "312",
       "date": "2026-04-26",
-      "amount": 107,
-      "category": "Utilities",
+      "amount": 68,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "309",
       "date": "2026-04-25",
-      "amount": 239,
+      "amount": 527,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "310",
       "date": "2026-04-25",
-      "amount": 58,
-      "category": "Rent",
+      "amount": 53,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "307",
       "date": "2026-04-24",
-      "amount": 573,
+      "amount": 150,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "308",
       "date": "2026-04-24",
-      "amount": 71,
-      "category": "Transport",
+      "amount": 212,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "305",
       "date": "2026-04-23",
-      "amount": 594,
+      "amount": 625,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "306",
       "date": "2026-04-23",
-      "amount": 35,
-      "category": "Utilities",
+      "amount": 97,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "303",
       "date": "2026-04-22",
-      "amount": 458,
+      "amount": 585,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "304",
       "date": "2026-04-22",
-      "amount": 162,
-      "category": "Rent",
+      "amount": 150,
+      "category": "Transport",
       "type": "expense"
     },
     {
       "id": "301",
       "date": "2026-04-21",
-      "amount": 181,
+      "amount": 230,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "302",
       "date": "2026-04-21",
-      "amount": 41,
-      "category": "Utilities",
+      "amount": 81,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "299",
       "date": "2026-04-20",
-      "amount": 197,
+      "amount": 471,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "300",
       "date": "2026-04-20",
-      "amount": 114,
-      "category": "Rent",
+      "amount": 92,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "297",
       "date": "2026-04-19",
-      "amount": 341,
+      "amount": 525,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "298",
       "date": "2026-04-19",
-      "amount": 126,
-      "category": "Dining",
+      "amount": 71,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "295",
       "date": "2026-04-18",
-      "amount": 356,
+      "amount": 152,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "296",
       "date": "2026-04-18",
-      "amount": 41,
-      "category": "Groceries",
+      "amount": 188,
+      "category": "Transport",
       "type": "expense"
     },
     {
       "id": "293",
       "date": "2026-04-17",
-      "amount": 190,
+      "amount": 380,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "294",
       "date": "2026-04-17",
-      "amount": 71,
-      "category": "Utilities",
+      "amount": 23,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "291",
       "date": "2026-04-16",
-      "amount": 433,
+      "amount": 578,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "292",
       "date": "2026-04-16",
-      "amount": 170,
-      "category": "Dining",
+      "amount": 95,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "289",
       "date": "2026-04-15",
-      "amount": 328,
+      "amount": 492,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "290",
       "date": "2026-04-15",
-      "amount": 29,
+      "amount": 145,
       "category": "Rent",
       "type": "expense"
     },
     {
       "id": "287",
       "date": "2026-04-14",
-      "amount": 157,
+      "amount": 244,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "288",
       "date": "2026-04-14",
-      "amount": 199,
-      "category": "Dining",
+      "amount": 62,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "285",
       "date": "2026-04-13",
-      "amount": 461,
+      "amount": 482,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "286",
       "date": "2026-04-13",
-      "amount": 74,
+      "amount": 133,
       "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "283",
       "date": "2026-04-12",
-      "amount": 355,
+      "amount": 488,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "284",
       "date": "2026-04-12",
-      "amount": 151,
-      "category": "Transport",
+      "amount": 37,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "281",
       "date": "2026-04-11",
-      "amount": 636,
+      "amount": 623,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "282",
       "date": "2026-04-11",
-      "amount": 120,
-      "category": "Rent",
+      "amount": 135,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "279",
       "date": "2026-04-10",
-      "amount": 542,
+      "amount": 285,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "280",
       "date": "2026-04-10",
-      "amount": 194,
-      "category": "Groceries",
+      "amount": 40,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "277",
       "date": "2026-04-09",
-      "amount": 511,
+      "amount": 595,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "278",
       "date": "2026-04-09",
-      "amount": 150,
-      "category": "Transport",
+      "amount": 186,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "275",
       "date": "2026-04-08",
-      "amount": 400,
+      "amount": 578,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "276",
       "date": "2026-04-08",
-      "amount": 175,
+      "amount": 143,
       "category": "Dining",
       "type": "expense"
     },
     {
       "id": "273",
       "date": "2026-04-07",
-      "amount": 592,
+      "amount": 498,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "274",
       "date": "2026-04-07",
-      "amount": 108,
-      "category": "Transport",
+      "amount": 144,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "271",
       "date": "2026-04-06",
-      "amount": 224,
+      "amount": 435,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "272",
       "date": "2026-04-06",
-      "amount": 52,
-      "category": "Dining",
+      "amount": 102,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "269",
       "date": "2026-04-05",
-      "amount": 272,
+      "amount": 404,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "270",
       "date": "2026-04-05",
-      "amount": 146,
-      "category": "Transport",
+      "amount": 71,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "267",
       "date": "2026-04-04",
-      "amount": 386,
+      "amount": 285,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "268",
       "date": "2026-04-04",
-      "amount": 115,
+      "amount": 189,
       "category": "Transport",
       "type": "expense"
     },
     {
       "id": "265",
       "date": "2026-04-03",
-      "amount": 471,
+      "amount": 376,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "266",
       "date": "2026-04-03",
-      "amount": 143,
-      "category": "Dining",
+      "amount": 87,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "263",
       "date": "2026-04-02",
-      "amount": 544,
+      "amount": 579,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "264",
       "date": "2026-04-02",
-      "amount": 219,
-      "category": "Dining",
+      "amount": 117,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "261",
       "date": "2026-04-01",
-      "amount": 366,
+      "amount": 204,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "262",
       "date": "2026-04-01",
-      "amount": 121,
-      "category": "Groceries",
+      "amount": 87,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "259",
       "date": "2026-03-31",
-      "amount": 576,
+      "amount": 630,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "260",
       "date": "2026-03-31",
-      "amount": 42,
-      "category": "Rent",
+      "amount": 108,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "257",
       "date": "2026-03-30",
-      "amount": 253,
+      "amount": 334,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "258",
       "date": "2026-03-30",
-      "amount": 157,
-      "category": "Utilities",
+      "amount": 150,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "255",
       "date": "2026-03-29",
-      "amount": 593,
+      "amount": 558,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "256",
       "date": "2026-03-29",
-      "amount": 178,
-      "category": "Transport",
+      "amount": 172,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "253",
       "date": "2026-03-28",
-      "amount": 600,
+      "amount": 430,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "254",
       "date": "2026-03-28",
-      "amount": 120,
-      "category": "Dining",
+      "amount": 195,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "251",
       "date": "2026-03-27",
-      "amount": 533,
+      "amount": 615,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "252",
       "date": "2026-03-27",
-      "amount": 53,
-      "category": "Transport",
+      "amount": 151,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "249",
       "date": "2026-03-26",
-      "amount": 576,
+      "amount": 459,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "250",
       "date": "2026-03-26",
-      "amount": 39,
-      "category": "Dining",
+      "amount": 195,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "247",
       "date": "2026-03-25",
-      "amount": 183,
+      "amount": 338,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "248",
       "date": "2026-03-25",
-      "amount": 26,
+      "amount": 40,
       "category": "Dining",
       "type": "expense"
     },
     {
       "id": "245",
       "date": "2026-03-24",
-      "amount": 287,
+      "amount": 244,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "246",
       "date": "2026-03-24",
-      "amount": 47,
-      "category": "Utilities",
+      "amount": 74,
+      "category": "Transport",
       "type": "expense"
     },
     {
       "id": "243",
       "date": "2026-03-23",
-      "amount": 232,
+      "amount": 168,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "244",
       "date": "2026-03-23",
-      "amount": 93,
-      "category": "Rent",
+      "amount": 170,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "241",
       "date": "2026-03-22",
-      "amount": 242,
+      "amount": 288,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "242",
       "date": "2026-03-22",
-      "amount": 207,
+      "amount": 156,
       "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "239",
       "date": "2026-03-21",
-      "amount": 332,
+      "amount": 271,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "240",
       "date": "2026-03-21",
-      "amount": 58,
-      "category": "Groceries",
+      "amount": 22,
+      "category": "Transport",
       "type": "expense"
     },
     {
       "id": "237",
       "date": "2026-03-20",
-      "amount": 452,
+      "amount": 421,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "238",
       "date": "2026-03-20",
-      "amount": 45,
-      "category": "Transport",
+      "amount": 84,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "235",
       "date": "2026-03-19",
-      "amount": 433,
+      "amount": 590,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "236",
       "date": "2026-03-19",
-      "amount": 145,
-      "category": "Dining",
+      "amount": 118,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "233",
       "date": "2026-03-18",
-      "amount": 361,
+      "amount": 625,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "234",
       "date": "2026-03-18",
-      "amount": 106,
-      "category": "Utilities",
+      "amount": 130,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "231",
       "date": "2026-03-17",
-      "amount": 309,
+      "amount": 590,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "232",
       "date": "2026-03-17",
-      "amount": 191,
-      "category": "Dining",
+      "amount": 150,
+      "category": "Transport",
       "type": "expense"
     },
     {
       "id": "229",
       "date": "2026-03-16",
-      "amount": 341,
+      "amount": 559,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "230",
       "date": "2026-03-16",
-      "amount": 27,
-      "category": "Transport",
+      "amount": 61,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "227",
       "date": "2026-03-15",
-      "amount": 396,
+      "amount": 164,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "228",
       "date": "2026-03-15",
-      "amount": 145,
+      "amount": 133,
       "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "225",
       "date": "2026-03-14",
-      "amount": 599,
+      "amount": 428,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "226",
       "date": "2026-03-14",
-      "amount": 184,
-      "category": "Transport",
+      "amount": 148,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "223",
       "date": "2026-03-13",
-      "amount": 474,
+      "amount": 540,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "224",
       "date": "2026-03-13",
-      "amount": 79,
-      "category": "Utilities",
+      "amount": 146,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "221",
       "date": "2026-03-12",
-      "amount": 560,
+      "amount": 501,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "222",
       "date": "2026-03-12",
-      "amount": 179,
+      "amount": 83,
       "category": "Rent",
       "type": "expense"
     },
     {
       "id": "219",
       "date": "2026-03-11",
-      "amount": 610,
+      "amount": 294,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "220",
       "date": "2026-03-11",
-      "amount": 36,
-      "category": "Rent",
+      "amount": 212,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "217",
       "date": "2026-03-10",
-      "amount": 248,
+      "amount": 633,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "218",
       "date": "2026-03-10",
-      "amount": 35,
-      "category": "Dining",
+      "amount": 197,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "215",
       "date": "2026-03-09",
-      "amount": 505,
+      "amount": 302,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "216",
       "date": "2026-03-09",
-      "amount": 55,
+      "amount": 167,
       "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "213",
       "date": "2026-03-08",
-      "amount": 431,
+      "amount": 419,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "214",
       "date": "2026-03-08",
-      "amount": 26,
+      "amount": 206,
       "category": "Transport",
       "type": "expense"
     },
     {
       "id": "211",
       "date": "2026-03-07",
-      "amount": 613,
+      "amount": 429,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "212",
       "date": "2026-03-07",
-      "amount": 183,
+      "amount": 184,
       "category": "Rent",
       "type": "expense"
     },
     {
       "id": "209",
       "date": "2026-03-06",
-      "amount": 299,
+      "amount": 171,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "210",
       "date": "2026-03-06",
-      "amount": 39,
-      "category": "Rent",
+      "amount": 179,
+      "category": "Transport",
       "type": "expense"
     },
     {
       "id": "207",
       "date": "2026-03-05",
-      "amount": 344,
+      "amount": 426,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "208",
       "date": "2026-03-05",
-      "amount": 55,
+      "amount": 89,
       "category": "Transport",
       "type": "expense"
     },
     {
       "id": "205",
       "date": "2026-03-04",
-      "amount": 506,
+      "amount": 311,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "206",
       "date": "2026-03-04",
-      "amount": 141,
+      "amount": 75,
       "category": "Rent",
       "type": "expense"
     },
     {
       "id": "203",
       "date": "2026-03-03",
-      "amount": 490,
+      "amount": 432,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "204",
       "date": "2026-03-03",
-      "amount": 96,
-      "category": "Utilities",
+      "amount": 65,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "201",
       "date": "2026-03-02",
-      "amount": 476,
+      "amount": 413,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "202",
       "date": "2026-03-02",
-      "amount": 117,
+      "amount": 166,
       "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "199",
       "date": "2026-03-01",
-      "amount": 267,
+      "amount": 179,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "200",
       "date": "2026-03-01",
-      "amount": 173,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "193",
-      "date": "2026-02-28",
-      "amount": 79,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "198",
-      "date": "2026-02-22",
-      "amount": 1388,
+      "amount": 126,
       "category": "Rent",
       "type": "expense"
     },
     {
-      "id": "195",
-      "date": "2026-02-19",
-      "amount": 139,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "194",
-      "date": "2026-02-13",
-      "amount": 194,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "196",
-      "date": "2026-02-12",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
       "id": "190",
-      "date": "2026-02-10",
+      "date": "2026-02-25",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "192",
-      "date": "2026-02-09",
+      "date": "2026-02-24",
       "amount": 42,
       "category": "Transport",
       "type": "expense"
     },
     {
+      "id": "196",
+      "date": "2026-02-19",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
       "id": "197",
-      "date": "2026-02-06",
+      "date": "2026-02-16",
       "amount": 102,
       "category": "Dining",
       "type": "expense"
     },
     {
+      "id": "194",
+      "date": "2026-02-14",
+      "amount": 194,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "195",
+      "date": "2026-02-13",
+      "amount": 139,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "193",
+      "date": "2026-02-12",
+      "amount": 79,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
       "id": "191",
-      "date": "2026-02-02",
+      "date": "2026-02-05",
       "amount": 111,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "182",
-      "date": "2026-01-26",
-      "amount": 93,
-      "category": "Groceries",
+      "id": "198",
+      "date": "2026-02-03",
+      "amount": 1388,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "189",
+      "date": "2026-01-30",
+      "amount": 1163,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "185",
+      "date": "2026-01-29",
+      "amount": 163,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "183",
+      "date": "2026-01-15",
+      "amount": 35,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "187",
+      "date": "2026-01-14",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "184",
+      "date": "2026-01-10",
+      "amount": 66,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "188",
+      "date": "2026-01-06",
+      "amount": 85,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "181",
-      "date": "2026-01-21",
+      "date": "2026-01-05",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "186",
-      "date": "2026-01-20",
+      "date": "2026-01-04",
       "amount": 116,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "184",
-      "date": "2026-01-19",
-      "amount": 66,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "187",
-      "date": "2026-01-15",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "188",
-      "date": "2026-01-10",
-      "amount": 85,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "183",
-      "date": "2026-01-09",
-      "amount": 35,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "185",
-      "date": "2026-01-06",
-      "amount": 163,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "189",
-      "date": "2026-01-02",
-      "amount": 1163,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "175",
-      "date": "2025-12-30",
-      "amount": 104,
-      "category": "Dining",
+      "id": "182",
+      "date": "2026-01-03",
+      "amount": 93,
+      "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "174",
-      "date": "2025-12-22",
+      "date": "2025-12-28",
       "amount": 55,
       "category": "Transport",
       "type": "expense"
     },
     {
-      "id": "177",
-      "date": "2025-12-21",
-      "amount": 184,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
       "id": "179",
-      "date": "2025-12-18",
+      "date": "2025-12-26",
       "amount": 135,
       "category": "Dining",
       "type": "expense"
     },
     {
+      "id": "172",
+      "date": "2025-12-23",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
       "id": "178",
-      "date": "2025-12-16",
+      "date": "2025-12-22",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
+    },
+    {
+      "id": "177",
+      "date": "2025-12-20",
+      "amount": 184,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "175",
+      "date": "2025-12-17",
+      "amount": 104,
+      "category": "Dining",
+      "type": "expense"
     },
     {
       "id": "176",
@@ -1009,31 +1016,17 @@
       "type": "expense"
     },
     {
-      "id": "180",
-      "date": "2025-12-09",
-      "amount": 1838,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "172",
-      "date": "2025-12-06",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
       "id": "173",
-      "date": "2025-12-05",
+      "date": "2025-12-06",
       "amount": 147,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "170",
-      "date": "2025-11-30",
-      "amount": 118,
-      "category": "Dining",
+      "id": "180",
+      "date": "2025-12-01",
+      "amount": 1838,
+      "category": "Rent",
       "type": "expense"
     },
     {
@@ -1044,120 +1037,141 @@
       "type": "expense"
     },
     {
-      "id": "165",
-      "date": "2025-11-27",
-      "amount": 48,
-      "category": "Transport",
+      "id": "170",
+      "date": "2025-11-26",
+      "amount": 118,
+      "category": "Dining",
       "type": "expense"
     },
     {
       "id": "171",
-      "date": "2025-11-24",
+      "date": "2025-11-14",
       "amount": 1613,
       "category": "Rent",
       "type": "expense"
     },
     {
+      "id": "165",
+      "date": "2025-11-12",
+      "amount": 48,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "164",
+      "date": "2025-11-10",
+      "amount": 129,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
       "id": "166",
-      "date": "2025-11-16",
+      "date": "2025-11-08",
       "amount": 91,
       "category": "Dining",
       "type": "expense"
     },
     {
       "id": "169",
-      "date": "2025-11-14",
+      "date": "2025-11-05",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
     },
     {
-      "id": "164",
-      "date": "2025-11-11",
-      "amount": 129,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
       "id": "167",
-      "date": "2025-11-09",
+      "date": "2025-11-03",
       "amount": 226,
       "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "163",
-      "date": "2025-11-06",
+      "date": "2025-11-02",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
-      "id": "154",
-      "date": "2025-10-29",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
-      "id": "157",
-      "date": "2025-10-24",
-      "amount": 79,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "160",
-      "date": "2025-10-22",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "161",
-      "date": "2025-10-21",
-      "amount": 102,
-      "category": "Dining",
+      "id": "158",
+      "date": "2025-10-28",
+      "amount": 194,
+      "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "159",
-      "date": "2025-10-17",
+      "date": "2025-10-22",
       "amount": 139,
       "category": "Groceries",
       "type": "expense"
     },
     {
       "id": "155",
-      "date": "2025-10-14",
+      "date": "2025-10-21",
       "amount": 111,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "162",
-      "date": "2025-10-08",
-      "amount": 1388,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "158",
-      "date": "2025-10-07",
-      "amount": 194,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
       "id": "156",
-      "date": "2025-10-02",
+      "date": "2025-10-20",
       "amount": 42,
       "category": "Transport",
       "type": "expense"
     },
     {
-      "id": "153",
+      "id": "154",
+      "date": "2025-10-15",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
+      "id": "161",
+      "date": "2025-10-12",
+      "amount": 102,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "160",
+      "date": "2025-10-09",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "157",
+      "date": "2025-10-03",
+      "amount": 79,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "162",
+      "date": "2025-10-02",
+      "amount": 1388,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "149",
+      "date": "2025-09-30",
+      "amount": 163,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "147",
       "date": "2025-09-23",
+      "amount": 35,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "153",
+      "date": "2025-09-22",
       "amount": 1163,
       "category": "Rent",
       "type": "expense"
@@ -1170,165 +1184,137 @@
       "type": "expense"
     },
     {
-      "id": "151",
-      "date": "2025-09-15",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
       "id": "152",
-      "date": "2025-09-12",
+      "date": "2025-09-18",
       "amount": 85,
       "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "148",
-      "date": "2025-09-10",
-      "amount": 66,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "149",
-      "date": "2025-09-09",
-      "amount": 163,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "145",
-      "date": "2025-09-03",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
       "id": "150",
-      "date": "2025-09-02",
+      "date": "2025-09-15",
       "amount": 116,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "147",
-      "date": "2025-09-01",
-      "amount": 35,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "140",
-      "date": "2025-07-28",
-      "amount": 226,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "142",
-      "date": "2025-07-27",
+      "id": "151",
+      "date": "2025-09-10",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
     },
     {
-      "id": "138",
-      "date": "2025-07-26",
-      "amount": 48,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "139",
-      "date": "2025-07-22",
-      "amount": 91,
+      "id": "148",
+      "date": "2025-09-09",
+      "amount": 66,
       "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "144",
-      "date": "2025-07-21",
-      "amount": 1613,
-      "category": "Rent",
-      "type": "expense"
+      "id": "145",
+      "date": "2025-09-07",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
     },
     {
       "id": "137",
-      "date": "2025-07-19",
+      "date": "2025-07-31",
       "amount": 129,
       "category": "Groceries",
       "type": "expense"
     },
     {
+      "id": "143",
+      "date": "2025-07-25",
+      "amount": 118,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
       "id": "136",
-      "date": "2025-07-16",
+      "date": "2025-07-19",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
       "id": "141",
-      "date": "2025-07-15",
+      "date": "2025-07-16",
       "amount": 161,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "143",
-      "date": "2025-07-07",
-      "amount": 118,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "131",
-      "date": "2025-06-29",
-      "amount": 194,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "128",
-      "date": "2025-06-28",
-      "amount": 111,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "133",
-      "date": "2025-06-27",
+      "id": "142",
+      "date": "2025-07-15",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
     },
     {
-      "id": "134",
-      "date": "2025-06-24",
-      "amount": 102,
+      "id": "138",
+      "date": "2025-07-12",
+      "amount": 48,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "140",
+      "date": "2025-07-08",
+      "amount": 226,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "139",
+      "date": "2025-07-06",
+      "amount": 91,
       "category": "Dining",
       "type": "expense"
     },
     {
+      "id": "144",
+      "date": "2025-07-04",
+      "amount": 1613,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
       "id": "130",
-      "date": "2025-06-21",
+      "date": "2025-06-26",
       "amount": 79,
       "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "129",
-      "date": "2025-06-20",
-      "amount": 42,
-      "category": "Transport",
+      "id": "128",
+      "date": "2025-06-25",
+      "amount": 111,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "135",
+      "date": "2025-06-23",
+      "amount": 1388,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "127",
-      "date": "2025-06-14",
+      "date": "2025-06-22",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
+    },
+    {
+      "id": "131",
+      "date": "2025-06-17",
+      "amount": 194,
+      "category": "Utilities",
+      "type": "expense"
     },
     {
       "id": "132",
@@ -1338,144 +1324,158 @@
       "type": "expense"
     },
     {
-      "id": "135",
-      "date": "2025-06-03",
-      "amount": 1388,
-      "category": "Rent",
+      "id": "134",
+      "date": "2025-06-05",
+      "amount": 102,
+      "category": "Dining",
       "type": "expense"
     },
     {
+      "id": "129",
+      "date": "2025-06-03",
+      "amount": 42,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "133",
+      "date": "2025-06-02",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
       "id": "118",
-      "date": "2025-05-30",
+      "date": "2025-05-31",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
+      "id": "121",
+      "date": "2025-05-25",
+      "amount": 66,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "123",
+      "date": "2025-05-18",
+      "amount": 116,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "124",
+      "date": "2025-05-17",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
       "id": "122",
-      "date": "2025-05-24",
+      "date": "2025-05-16",
       "amount": 163,
       "category": "Utilities",
       "type": "expense"
     },
     {
       "id": "120",
-      "date": "2025-05-19",
+      "date": "2025-05-12",
       "amount": 35,
       "category": "Transport",
       "type": "expense"
     },
     {
-      "id": "119",
-      "date": "2025-05-16",
-      "amount": 93,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "124",
-      "date": "2025-05-11",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "125",
-      "date": "2025-05-10",
-      "amount": 85,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "123",
-      "date": "2025-05-07",
-      "amount": 116,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
       "id": "126",
-      "date": "2025-05-05",
+      "date": "2025-05-04",
       "amount": 1163,
       "category": "Rent",
       "type": "expense"
     },
     {
-      "id": "121",
+      "id": "125",
       "date": "2025-05-03",
-      "amount": 66,
+      "amount": 85,
       "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "109",
-      "date": "2025-04-24",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
+      "id": "119",
+      "date": "2025-05-02",
+      "amount": 93,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "116",
+      "date": "2025-04-27",
+      "amount": 135,
+      "category": "Dining",
+      "type": "expense"
     },
     {
       "id": "111",
-      "date": "2025-04-22",
+      "date": "2025-04-25",
       "amount": 55,
       "category": "Transport",
       "type": "expense"
     },
     {
       "id": "114",
-      "date": "2025-04-21",
+      "date": "2025-04-20",
       "amount": 184,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "115",
-      "date": "2025-04-20",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "110",
-      "date": "2025-04-17",
-      "amount": 147,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "116",
-      "date": "2025-04-13",
-      "amount": 135,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
       "id": "113",
-      "date": "2025-04-06",
+      "date": "2025-04-19",
       "amount": 257,
       "category": "Utilities",
       "type": "expense"
     },
     {
+      "id": "115",
+      "date": "2025-04-10",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
       "id": "112",
-      "date": "2025-04-04",
+      "date": "2025-04-09",
       "amount": 104,
       "category": "Dining",
       "type": "expense"
     },
     {
+      "id": "109",
+      "date": "2025-04-08",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
       "id": "117",
-      "date": "2025-04-01",
+      "date": "2025-04-03",
       "amount": 1838,
       "category": "Rent",
       "type": "expense"
     },
     {
-      "id": "100",
+      "id": "110",
+      "date": "2025-04-01",
+      "amount": 147,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "107",
       "date": "2025-03-29",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
+      "amount": 118,
+      "category": "Dining",
+      "type": "expense"
     },
     {
       "id": "106",
@@ -1485,402 +1485,395 @@
       "type": "income"
     },
     {
-      "id": "108",
-      "date": "2025-03-19",
-      "amount": 1613,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "102",
-      "date": "2025-03-18",
-      "amount": 48,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "104",
-      "date": "2025-03-16",
-      "amount": 226,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "101",
-      "date": "2025-03-13",
-      "amount": 129,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "103",
-      "date": "2025-03-06",
-      "amount": 91,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "107",
-      "date": "2025-03-04",
-      "amount": 118,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "105",
-      "date": "2025-03-02",
-      "amount": 161,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "96",
-      "date": "2025-02-26",
-      "amount": 139,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "98",
-      "date": "2025-02-25",
-      "amount": 102,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "91",
-      "date": "2025-02-22",
+      "id": "100",
+      "date": "2025-03-26",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
-      "id": "92",
-      "date": "2025-02-17",
-      "amount": 111,
-      "category": "Groceries",
+      "id": "104",
+      "date": "2025-03-18",
+      "amount": 226,
+      "category": "Utilities",
       "type": "expense"
     },
     {
-      "id": "93",
-      "date": "2025-02-16",
-      "amount": 42,
+      "id": "103",
+      "date": "2025-03-13",
+      "amount": 91,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "102",
+      "date": "2025-03-09",
+      "amount": 48,
       "category": "Transport",
       "type": "expense"
     },
     {
+      "id": "108",
+      "date": "2025-03-08",
+      "amount": 1613,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "105",
+      "date": "2025-03-07",
+      "amount": 161,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "101",
+      "date": "2025-03-04",
+      "amount": 129,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "95",
+      "date": "2025-02-23",
+      "amount": 194,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "91",
+      "date": "2025-02-21",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
       "id": "99",
-      "date": "2025-02-15",
+      "date": "2025-02-18",
       "amount": 1388,
       "category": "Rent",
       "type": "expense"
     },
     {
       "id": "97",
-      "date": "2025-02-14",
+      "date": "2025-02-16",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
     },
     {
-      "id": "95",
-      "date": "2025-02-11",
-      "amount": 194,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
       "id": "94",
-      "date": "2025-02-01",
+      "date": "2025-02-14",
       "amount": 79,
       "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "84",
-      "date": "2025-01-28",
-      "amount": 35,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "88",
-      "date": "2025-01-27",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "82",
-      "date": "2025-01-26",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
-      "id": "83",
-      "date": "2025-01-19",
-      "amount": 93,
+      "id": "92",
+      "date": "2025-02-10",
+      "amount": 111,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "90",
-      "date": "2025-01-18",
-      "amount": 1163,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "87",
-      "date": "2025-01-14",
-      "amount": 116,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "89",
-      "date": "2025-01-08",
-      "amount": 85,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "85",
-      "date": "2025-01-07",
-      "amount": 66,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "86",
-      "date": "2025-01-02",
-      "amount": 163,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "77",
-      "date": "2024-11-28",
-      "amount": 226,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "76",
-      "date": "2024-11-27",
-      "amount": 91,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "80",
-      "date": "2024-11-26",
-      "amount": 118,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "81",
-      "date": "2024-11-18",
-      "amount": 1613,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "75",
-      "date": "2024-11-17",
-      "amount": 48,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "78",
-      "date": "2024-11-14",
-      "amount": 161,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "79",
-      "date": "2024-11-13",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "73",
-      "date": "2024-11-08",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
-      "id": "74",
-      "date": "2024-11-01",
-      "amount": 129,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "66",
-      "date": "2024-10-30",
-      "amount": 42,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "71",
-      "date": "2024-10-28",
+      "id": "98",
+      "date": "2025-02-08",
       "amount": 102,
       "category": "Dining",
       "type": "expense"
     },
     {
+      "id": "93",
+      "date": "2025-02-05",
+      "amount": 42,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "96",
+      "date": "2025-02-02",
+      "amount": 139,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "90",
+      "date": "2025-01-30",
+      "amount": 1163,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "83",
+      "date": "2025-01-27",
+      "amount": 93,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "88",
+      "date": "2025-01-26",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "87",
+      "date": "2025-01-18",
+      "amount": 116,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "84",
+      "date": "2025-01-15",
+      "amount": 35,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "85",
+      "date": "2025-01-08",
+      "amount": 66,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "89",
+      "date": "2025-01-06",
+      "amount": 85,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "86",
+      "date": "2025-01-05",
+      "amount": 163,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "82",
+      "date": "2025-01-04",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
+      "id": "73",
+      "date": "2024-11-29",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
+      "id": "81",
+      "date": "2024-11-27",
+      "amount": 1613,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "79",
+      "date": "2024-11-24",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "78",
+      "date": "2024-11-20",
+      "amount": 161,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "80",
+      "date": "2024-11-14",
+      "amount": 118,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "76",
+      "date": "2024-11-07",
+      "amount": 91,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "74",
+      "date": "2024-11-06",
+      "amount": 129,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "77",
+      "date": "2024-11-03",
+      "amount": 226,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "75",
+      "date": "2024-11-02",
+      "amount": 48,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "71",
+      "date": "2024-10-31",
+      "amount": 102,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "68",
+      "date": "2024-10-30",
+      "amount": 194,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "72",
+      "date": "2024-10-27",
+      "amount": 1388,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "65",
+      "date": "2024-10-21",
+      "amount": 111,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "64",
+      "date": "2024-10-11",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
+      "id": "69",
+      "date": "2024-10-09",
+      "amount": 139,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "66",
+      "date": "2024-10-08",
+      "amount": 42,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
       "id": "70",
-      "date": "2024-10-24",
+      "date": "2024-10-06",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
     },
     {
       "id": "67",
-      "date": "2024-10-23",
+      "date": "2024-10-04",
       "amount": 79,
       "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "64",
-      "date": "2024-10-18",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
-      "id": "68",
-      "date": "2024-10-16",
-      "amount": 194,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "65",
-      "date": "2024-10-11",
-      "amount": 111,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "69",
-      "date": "2024-10-04",
-      "amount": 139,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "72",
-      "date": "2024-10-03",
-      "amount": 1388,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "62",
-      "date": "2024-09-30",
-      "amount": 85,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "63",
-      "date": "2024-09-29",
-      "amount": 1163,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "58",
-      "date": "2024-09-27",
-      "amount": 66,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "57",
-      "date": "2024-09-26",
-      "amount": 35,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
       "id": "60",
-      "date": "2024-09-20",
+      "date": "2024-09-28",
       "amount": 116,
       "category": "Groceries",
       "type": "expense"
     },
     {
+      "id": "57",
+      "date": "2024-09-27",
+      "amount": 35,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
       "id": "55",
-      "date": "2024-09-19",
+      "date": "2024-09-25",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
-      "id": "56",
-      "date": "2024-09-16",
-      "amount": 93,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "59",
-      "date": "2024-09-11",
-      "amount": 163,
-      "category": "Utilities",
+      "id": "63",
+      "date": "2024-09-22",
+      "amount": 1163,
+      "category": "Rent",
       "type": "expense"
     },
     {
       "id": "61",
-      "date": "2024-09-02",
+      "date": "2024-09-17",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
     },
     {
-      "id": "48",
-      "date": "2024-08-30",
-      "amount": 55,
-      "category": "Transport",
+      "id": "58",
+      "date": "2024-09-14",
+      "amount": 66,
+      "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "51",
-      "date": "2024-08-29",
-      "amount": 184,
+      "id": "59",
+      "date": "2024-09-10",
+      "amount": 163,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "56",
+      "date": "2024-09-08",
+      "amount": 93,
       "category": "Groceries",
       "type": "expense"
     },
     {
+      "id": "62",
+      "date": "2024-09-05",
+      "amount": 85,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
       "id": "49",
-      "date": "2024-08-27",
+      "date": "2024-08-30",
       "amount": 104,
       "category": "Dining",
       "type": "expense"
     },
     {
-      "id": "46",
-      "date": "2024-08-21",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
       "id": "50",
-      "date": "2024-08-19",
+      "date": "2024-08-24",
       "amount": 257,
       "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "47",
+      "date": "2024-08-22",
+      "amount": 147,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "51",
+      "date": "2024-08-19",
+      "amount": 184,
+      "category": "Groceries",
       "type": "expense"
     },
     {
@@ -1899,156 +1892,177 @@
     },
     {
       "id": "52",
+      "date": "2024-08-12",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "48",
       "date": "2024-08-07",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "47",
-      "date": "2024-08-06",
-      "amount": 147,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "41",
-      "date": "2024-07-28",
-      "amount": 226,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "42",
-      "date": "2024-07-25",
-      "amount": 161,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "40",
-      "date": "2024-07-23",
-      "amount": 91,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "43",
-      "date": "2024-07-22",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "45",
-      "date": "2024-07-19",
-      "amount": 1613,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "37",
-      "date": "2024-07-13",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
-    },
-    {
-      "id": "44",
-      "date": "2024-07-12",
-      "amount": 118,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "39",
-      "date": "2024-07-09",
-      "amount": 48,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
-      "id": "38",
-      "date": "2024-07-02",
-      "amount": 129,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "35",
-      "date": "2024-04-29",
-      "amount": 135,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "34",
-      "date": "2024-04-27",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
-      "id": "30",
-      "date": "2024-04-22",
       "amount": 55,
       "category": "Transport",
       "type": "expense"
     },
     {
-      "id": "33",
-      "date": "2024-04-21",
-      "amount": 184,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
-      "id": "32",
-      "date": "2024-04-18",
-      "amount": 257,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "31",
-      "date": "2024-04-17",
-      "amount": 104,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "28",
-      "date": "2024-04-12",
+      "id": "46",
+      "date": "2024-08-01",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
-      "id": "29",
-      "date": "2024-04-07",
-      "amount": 147,
+      "id": "42",
+      "date": "2024-07-31",
+      "amount": 161,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "36",
-      "date": "2024-04-04",
-      "amount": 1838,
+      "id": "37",
+      "date": "2024-07-30",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
+      "id": "45",
+      "date": "2024-07-28",
+      "amount": 1613,
       "category": "Rent",
       "type": "expense"
     },
     {
-      "id": "25",
-      "date": "2024-03-29",
+      "id": "39",
+      "date": "2024-07-27",
+      "amount": 48,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "41",
+      "date": "2024-07-25",
+      "amount": 226,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "40",
+      "date": "2024-07-17",
+      "amount": 91,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "38",
+      "date": "2024-07-14",
+      "amount": 129,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "44",
+      "date": "2024-07-10",
+      "amount": 118,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "43",
+      "date": "2024-07-08",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
     },
     {
-      "id": "27",
-      "date": "2024-03-26",
-      "amount": 1613,
+      "id": "32",
+      "date": "2024-04-24",
+      "amount": 257,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "28",
+      "date": "2024-04-23",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
+    },
+    {
+      "id": "30",
+      "date": "2024-04-19",
+      "amount": 55,
+      "category": "Transport",
+      "type": "expense"
+    },
+    {
+      "id": "34",
+      "date": "2024-04-17",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "35",
+      "date": "2024-04-14",
+      "amount": 135,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "31",
+      "date": "2024-04-11",
+      "amount": 104,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "33",
+      "date": "2024-04-08",
+      "amount": 184,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "36",
+      "date": "2024-04-06",
+      "amount": 1838,
       "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "29",
+      "date": "2024-04-01",
+      "amount": 147,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
+      "id": "25",
+      "date": "2024-03-30",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "26",
+      "date": "2024-03-29",
+      "amount": 118,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "22",
+      "date": "2024-03-26",
+      "amount": 91,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "23",
+      "date": "2024-03-25",
+      "amount": 226,
+      "category": "Utilities",
       "type": "expense"
     },
     {
@@ -2066,13 +2080,6 @@
       "type": "income"
     },
     {
-      "id": "21",
-      "date": "2024-03-17",
-      "amount": 48,
-      "category": "Transport",
-      "type": "expense"
-    },
-    {
       "id": "20",
       "date": "2024-03-07",
       "amount": 129,
@@ -2080,24 +2087,17 @@
       "type": "expense"
     },
     {
-      "id": "26",
-      "date": "2024-03-06",
-      "amount": 118,
-      "category": "Dining",
+      "id": "21",
+      "date": "2024-03-04",
+      "amount": 48,
+      "category": "Transport",
       "type": "expense"
     },
     {
-      "id": "23",
-      "date": "2024-03-03",
-      "amount": 226,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "22",
+      "id": "27",
       "date": "2024-03-02",
-      "amount": 91,
-      "category": "Dining",
+      "amount": 1613,
+      "category": "Rent",
       "type": "expense"
     },
     {
@@ -2108,25 +2108,32 @@
       "type": "expense"
     },
     {
-      "id": "11",
-      "date": "2024-02-27",
-      "amount": 111,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
       "id": "12",
-      "date": "2024-02-26",
+      "date": "2024-02-28",
       "amount": 42,
       "category": "Transport",
       "type": "expense"
     },
     {
+      "id": "11",
+      "date": "2024-02-22",
+      "amount": 111,
+      "category": "Groceries",
+      "type": "expense"
+    },
+    {
       "id": "16",
-      "date": "2024-02-25",
+      "date": "2024-02-21",
       "amount": 800,
       "category": "Freelance",
       "type": "income"
+    },
+    {
+      "id": "13",
+      "date": "2024-02-20",
+      "amount": 79,
+      "category": "Dining",
+      "type": "expense"
     },
     {
       "id": "15",
@@ -2143,88 +2150,81 @@
       "type": "expense"
     },
     {
-      "id": "13",
-      "date": "2024-02-07",
-      "amount": 79,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
       "id": "18",
-      "date": "2024-02-05",
+      "date": "2024-02-10",
       "amount": 1388,
       "category": "Rent",
       "type": "expense"
     },
     {
       "id": "10",
-      "date": "2024-02-03",
+      "date": "2024-02-06",
       "amount": 4500,
       "category": "Salary",
       "type": "income"
     },
     {
-      "id": "9",
-      "date": "2024-01-27",
-      "amount": 1163,
-      "category": "Rent",
-      "type": "expense"
-    },
-    {
-      "id": "8",
-      "date": "2024-01-26",
-      "amount": 85,
-      "category": "Dining",
-      "type": "expense"
-    },
-    {
-      "id": "2",
-      "date": "2024-01-21",
-      "amount": 93,
-      "category": "Groceries",
-      "type": "expense"
-    },
-    {
       "id": "3",
-      "date": "2024-01-18",
+      "date": "2024-01-28",
       "amount": 35,
       "category": "Transport",
       "type": "expense"
     },
     {
-      "id": "5",
-      "date": "2024-01-11",
-      "amount": 163,
-      "category": "Utilities",
-      "type": "expense"
-    },
-    {
-      "id": "7",
-      "date": "2024-01-09",
-      "amount": 800,
-      "category": "Freelance",
-      "type": "income"
-    },
-    {
       "id": "6",
-      "date": "2024-01-04",
+      "date": "2024-01-23",
       "amount": 116,
       "category": "Groceries",
       "type": "expense"
     },
     {
-      "id": "1",
-      "date": "2024-01-03",
-      "amount": 4500,
-      "category": "Salary",
-      "type": "income"
+      "id": "8",
+      "date": "2024-01-15",
+      "amount": 85,
+      "category": "Dining",
+      "type": "expense"
+    },
+    {
+      "id": "5",
+      "date": "2024-01-14",
+      "amount": 163,
+      "category": "Utilities",
+      "type": "expense"
+    },
+    {
+      "id": "2",
+      "date": "2024-01-11",
+      "amount": 93,
+      "category": "Groceries",
+      "type": "expense"
     },
     {
       "id": "4",
-      "date": "2024-01-02",
+      "date": "2024-01-10",
       "amount": 66,
       "category": "Dining",
       "type": "expense"
+    },
+    {
+      "id": "9",
+      "date": "2024-01-09",
+      "amount": 1163,
+      "category": "Rent",
+      "type": "expense"
+    },
+    {
+      "id": "7",
+      "date": "2024-01-07",
+      "amount": 800,
+      "category": "Freelance",
+      "type": "income"
+    },
+    {
+      "id": "1",
+      "date": "2024-01-04",
+      "amount": 4500,
+      "category": "Salary",
+      "type": "income"
     }
   ],
   "budgetDb": {

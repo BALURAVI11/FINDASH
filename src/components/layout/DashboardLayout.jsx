@@ -15,9 +15,8 @@ import {
   ChevronLeft,
   ChevronRight,
   LogOut,
-  MessageCircle, 
-  Briefcase, 
-  Camera,
+  Mail,
+  Briefcase,
   HelpCircle,
   Headphones,
   MessageSquare,
@@ -168,14 +167,11 @@ const SidebarContent = ({
 
           {/* Social Icons */}
           <div className="flex items-center justify-center space-x-4 px-2 pt-2">
-            <button className="p-2 text-slate-400 hover:text-[#1DA1F2] transition-colors" title="Twitter">
-              <MessageCircle className="w-5 h-5" />
+            <button className="p-2 text-slate-400 hover:text-emerald-600 transition-colors" title="Email">
+              <Mail className="w-5 h-5" />
             </button>
             <button className="p-2 text-slate-400 hover:text-[#0A66C2] transition-colors" title="LinkedIn">
               <Briefcase className="w-5 h-5" />
-            </button>
-            <button className="p-2 text-slate-400 hover:text-[#E4405F] transition-colors" title="Instagram">
-              <Camera className="w-5 h-5" />
             </button>
           </div>
         </>
