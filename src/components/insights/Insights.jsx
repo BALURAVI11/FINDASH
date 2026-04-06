@@ -66,6 +66,11 @@ export const Insights = () => {
   const [comparisonMonth, setComparisonMonth] = useState(currentInitialMonth);
   const [comparisonYear, setComparisonYear] = useState(() => new Date().getFullYear().toString());
 
+  // 5. Custom Range Comparison State Logic
+  const customInitialStart = new Date(new Date().setMonth(new Date().getMonth() - 2)).toISOString().slice(0, 7);
+  const [customStartMonth, setCustomStartMonth] = useState(customInitialStart);
+  const [customEndMonth, setCustomEndMonth] = useState(currentInitialMonth);
+
   const periodicExpenses = useMemo(() => {
     return expenses.filter(t => {
       if (comparisonType === 'month') {
@@ -223,6 +228,42 @@ export const Insights = () => {
     return { categories, fullHeading, prevLabel };
 
   }, [expenses, comparisonType, comparisonMonth, comparisonYear, periodicExpenses]);
+
+  const customRangeData = useMemo(() => {
+    if (!customStartMonth || !customEndMonth || customStartMonth > customEndMonth) return [];
+    
+    const filtered = transactions.filter(t => {
+      const tMonth = t.date.slice(0, 7);
+      return tMonth >= customStartMonth && tMonth <= customEndMonth;
+    });
+
+    const groups = {};
+    filtered.forEach(t => {
+      const tMonth = t.date.slice(0, 7);
+      const key = `${tMonth}-${t.type}-${t.category}`;
+      if (!groups[key]) {
+        const [y, m] = tMonth.split('-');
+        const dateObj = new Date(parseInt(y), parseInt(m) - 1, 1);
+        const monthName = dateObj.toLocaleString('default', { month: 'long', year: 'numeric' });
+        
+        groups[key] = {
+          id: key,
+          dateStr: tMonth,
+          monthName,
+          category: t.category,
+          amount: 0,
+          type: t.type
+        };
+      }
+      groups[key].amount += Number(t.amount);
+    });
+
+    return Object.values(groups).sort((a, b) => {
+      if (a.dateStr !== b.dateStr) return b.dateStr.localeCompare(a.dateStr); 
+      if (a.type !== b.type) return a.type.localeCompare(b.type); 
+      return b.amount - a.amount;
+    });
+  }, [transactions, customStartMonth, customEndMonth]);
 
   return (
     <div className="relative space-y-8 animate-slide-up stagger-1 mb-10 z-10">
@@ -451,8 +492,79 @@ export const Insights = () => {
 
         </div>
 
+        {/* --- NEW MODULE: Custom Range Analysis --- */}
+        <div className="relative z-10 bg-[#FFFFF0] dark:bg-slate-800/80 rounded-2xl p-6 shadow-[0_0_15px_rgba(0,0,0,0.05)] dark:shadow-[0_0_15px_rgba(0,0,0,0.2)] border border-slate-100 dark:border-slate-700 animate-slide-up stagger-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
+            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 flex items-center">
+              <Calendar className="w-5 h-5 mr-2 text-indigo-500" /> Custom Range Analysis
+            </h3>
+
+            {/* Range Controls */}
+            <div className="flex items-center gap-2 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-1.5 rounded-xl">
+              <input 
+                type="month" 
+                value={customStartMonth}
+                onChange={(e) => setCustomStartMonth(e.target.value)}
+                className="px-2 py-1 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none w-[130px] [color-scheme:light] dark:[color-scheme:dark]"
+              />
+              <span className="text-slate-400 dark:text-slate-500 font-bold px-1 text-sm">to</span>
+              <input 
+                type="month" 
+                value={customEndMonth}
+                onChange={(e) => setCustomEndMonth(e.target.value)}
+                className="px-2 py-1 bg-transparent text-sm font-medium text-slate-700 dark:text-slate-300 outline-none w-[130px] [color-scheme:light] dark:[color-scheme:dark]"
+              />
+            </div>
+          </div>
+
+          {customStartMonth > customEndMonth ? (
+             <div className="bg-rose-50 dark:bg-rose-900/20 py-8 rounded-xl border border-rose-100 dark:border-rose-800/30 flex items-center justify-center text-center">
+               <p className="text-rose-700 dark:text-rose-500 font-semibold text-sm">
+                 Invalid range: "From" month cannot be after "To" month.
+               </p>
+             </div>
+          ) : customRangeData.length === 0 ? (
+             <div className="bg-slate-50 dark:bg-slate-900/40 py-8 rounded-xl border border-slate-100 dark:border-slate-700/50 flex items-center justify-center text-center">
+               <p className="text-slate-500 dark:text-slate-400 font-medium text-sm">
+                 No transactions found in this custom period.
+               </p>
+             </div>
+          ) : (
+            <div className="bg-[#FFFFF0] dark:bg-slate-800 rounded-2xl border-2 border-slate-200 dark:border-slate-700/60 overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.02)] dark:shadow-[0_0_20px_rgba(0,0,0,0.15)] transition-all duration-300 hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-[0_0_25px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_0_25px_rgba(0,0,0,0.25)]">
+              <div className="overflow-x-auto max-h-[400px] overflow-y-auto">
+                <table className="w-full text-left text-sm relative">
+                  <thead className="bg-slate-100 dark:bg-slate-900 sticky top-0 z-10 shadow-sm">
+                    <tr>
+                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider">Month</th>
+                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider">Category</th>
+                      <th className="px-5 py-4 font-bold text-slate-700 dark:text-slate-300 tracking-wider text-right">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800/80 text-slate-700 dark:text-slate-300">
+                    {customRangeData.map((row) => (
+                      <tr key={row.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td className="px-5 py-3.5 font-semibold text-slate-800 dark:text-slate-200">{row.monthName}</td>
+                        <td className="px-5 py-3.5 font-medium flex items-center gap-2">
+                          <span className={`w-2 h-2 rounded-full ${row.type === 'expense' ? 'bg-rose-400' : 'bg-emerald-400'}`}></span>
+                          {row.category}
+                          <span className="text-[10px] uppercase font-bold text-slate-400 ml-1 tracking-wider">
+                            ({row.type})
+                          </span>
+                        </td>
+                        <td className={`px-5 py-3.5 text-right font-bold ${row.type === 'expense' ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
+                          {row.type === 'income' ? '+' : '-'}${row.amount.toLocaleString()}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </div>
+
         {/* Global Summary Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-up stagger-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-up stagger-4">
           {/* Highest Spending Category */}
           <div className="bg-[#FFFFF0] dark:bg-slate-800 rounded-2xl p-6 shadow-[0_0_15px_rgba(244,63,94,0.15)] dark:shadow-[0_0_15px_rgba(244,63,94,0.1)] border-2 border-rose-200 dark:border-rose-900/50 relative overflow-hidden transition-all hover:-translate-y-1 hover:scale-[1.02] duration-300 hover:border-rose-400 dark:hover:border-rose-500 hover:shadow-[0_0_25px_rgba(244,63,94,0.35)] dark:hover:shadow-[0_0_25px_rgba(244,63,94,0.3)]">
             <div className="flex items-center justify-between mb-4">

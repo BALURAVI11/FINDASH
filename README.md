@@ -57,7 +57,7 @@ npm run dev
 
 The app will open at **http://localhost:5173** (Vite default).
 
-> **Note:** Currently, no backend or database is attached. All data is generated from mock transactions and persisted securely in the browser's `localStorage` for immediate usability. **For effective information and to showcase my work, I added mock data spanning continuously up to April 2026.**
+> **Note:** The application features a **Dual-Mode Data System**. By default, it operates entirely offline using the browser's `localStorage`. However, we have also integrated a **Mock API (json-server)** mode that simulates a real backend environment, complete with a global data-source toggle and a local migration script. **For effective information and to showcase my work, I added mock data spanning continuously up to April 2026.**
 
 ---
 
@@ -127,6 +127,7 @@ The app will open at **http://localhost:5173** (Vite default).
 - Smart Insight Engine compares the **last month vs the current month** automatically, returning color-coded warnings or praise logic.
 - A **Three-Month Comparison feature** validates against the current selected month with the previous three months. It strictly shares the identical calendar filter options as the Budgets & Analytics section.
 - Month-over-Month & Year-over-Year calculations break down differences inside categories indicating absolute `+$X` increases or savings.
+- A **Custom Range Analysis Table** allows users to explicitly define a "From" and "To" period to generate a precise, color-coded tabular breakdown of all aggregated income and expenses during that exact window.
 
 ---
 
@@ -166,19 +167,22 @@ A standardized identity hub indicating location, timezone, verifications, and us
 ---
 ## Project Status & Upcoming Backend Features
 
-For right now, we are entirely operating on the frontend. The project acts as a functional showcase indicating how a fully integrated system will respond to data changes.
+Currently, the project acts as a deeply functional showcase of UI/UX, but we have laid the foundation for backend operations by implementing a **Database Switcher** (toggling between Offline Local Storage and a Mock JSON API server). 
 
-Because of this, there are a few UI elements intentionally built as **placeholders** for upcoming backend integrations:
+However, to keep the focus explicitly on the frontend design logic, certain elements trigger stylish **"Feature In Progress"** modals or placeholders demonstrating where extensive server-side features will live:
 
-1. **Log Out Button / Authentication:** Included in the sidebar to visualize where future user sessions (Firebase/Auth0 APIs) will be controlled. Right now, it acts purely as a mock UX switch. User login will be built next.
-2. **Contact / Help / Support:** Currently visual menu items pointing to future integrations for issue ticketing, FAQ dropdowns, or live-chat bug reporting tools.
-3. **Social Media Icons:** Added as footers for tracking future application updates.
-4. **Notifications:** Mock icon added for future real-time alerts.
+1. **Log Out Button / Authentication:** Included in the sidebar to visualize where future user sessions will live. Clicking this currently triggers an interactive "In Progress" modal.
+2. **Contact / Support:** Currently visual menu items. Clicking Contact displays mock placeholder details (fake company phone, email, etc.), and Support redirects you to a simulated AI chat layout.
+3. **Help / FAQs:** A mock-functional Help modal with a search bar (visual only) and a dropdown of frequently asked questions designed to expand to show placeholder backend text.
+4. **Notifications:** Mock notification bell icon that, when clicked, triggers a similar "Feature In Progress" modal indicating the future implementation of real-time alerts.
+5. **Social Media Icons:** Added as footers for tracking future application updates.
 
 ---
 ### 11. Persistence & State Management
 
-All state runs linearly through `Context API` wrapped heavily via heavily partitioned hooks linked fundamentally back into `localstorage`. 
+All state runs linearly through a centralized `Context API` utilizing an asynchronous `dataService` abstraction layer. This allows the entire UI to effortlessly switch between:
+1. Pure client-side `localStorage` mapping.
+2. Asynchronous backend FETCH requests to a `json-server` simulating a true REST API. 
 
 ---
 

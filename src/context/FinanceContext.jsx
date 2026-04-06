@@ -1,4 +1,13 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import { 
+  fetchTransactions, 
+  fetchBudgets, 
+  syncTransactions, 
+  syncBudgets, 
+  addTransactionApi, 
+  editTransactionApi, 
+  deleteTransactionApi 
+} from "../services/dataService";
 
 const FinanceContext = createContext(null);
 
@@ -137,6 +146,10 @@ const DEFAULT_BUDGETS = {
 };
 
 export const FinanceProvider = ({ children }) => {
+  const [dataSource, setDataSource] = useState(() => {
+    return localStorage.getItem("dashboard_data_source") || "local";
+  });
+
   const [isLoading, setIsLoading] = useState(true);
   const [transactions, setTransactions] = useState([]);
   
@@ -150,6 +163,11 @@ export const FinanceProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("dashboard_theme") || "light";
   });
+
+  // Data Source Persister
+  useEffect(() => {
+    localStorage.setItem("dashboard_data_source", dataSource);
+  }, [dataSource]);
 
   // Theme Toggler side effect
   useEffect(() => {
@@ -174,78 +192,117 @@ export const FinanceProvider = ({ children }) => {
 
   // Mock Asynchronous Database Fetch including Budgets
   useEffect(() => {
+    let active = true;
     const fetchData = async () => {
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 800));
       
-      const savedTx = localStorage.getItem("dashboard_transactions_v3");
-      const savedBudgets = localStorage.getItem("dashboard_budgets_v4");
-      
-      if (savedTx) {
-        const parsedTx = JSON.parse(savedTx);
-        setTransactions(deDuplicateTransactions(parsedTx));
-      } else {
-        setTransactions(MOCK_TRANSACTIONS);
-      }
-      
-      if (savedBudgets) {
-        const parsed = JSON.parse(savedBudgets);
-        setBudgets({ ...parsed, ...DEFAULT_BUDGETS });
-      } else {
-        setBudgets(DEFAULT_BUDGETS);
-      }
+      try {
+        let txData = await fetchTransactions(dataSource);
+        let bData = await fetchBudgets(dataSource);
+        
+        // Seed default locally if completely empty
+        if (dataSource === "local" && txData === null) {
+          txData = await syncTransactions("local", MOCK_TRANSACTIONS);
+        } else if (txData === null) {
+          txData = [];
+        }
 
-      setIsLoading(false);
+        if (dataSource === "local" && bData === null) {
+          bData = await syncBudgets("local", DEFAULT_BUDGETS);
+        } else if (bData === null) {
+          bData = {};
+        }
+
+        if (active) {
+            setTransactions(Array.isArray(txData) ? txData : []);
+            setBudgets(bData || {});
+            setIsLoading(false);
+        }
+      } catch (err) {
+        console.error("Initialization error:", err);
+        if (active) {
+             alert("Failed to connect to Mock API. Ensure json-server is running on port 5000.");
+             setTransactions([]);
+             setBudgets({});
+             setIsLoading(false);
+        }
+      }
     };
     fetchData();
-  }, []);
+    return () => { active = false; };
+  }, [dataSource]);
 
-  // Persist transactions to localStorage
-  useEffect(() => {
-    if (!isLoading) {
-      localStorage.setItem("dashboard_transactions_v3", JSON.stringify(transactions));
-      localStorage.setItem("dashboard_budgets_v4", JSON.stringify(budgets));
-    }
-  }, [transactions, budgets, isLoading]);
-
-  const addTransaction = (newTransaction) => {
+  const addTransaction = async (newTransaction) => {
     const transaction = { id: Date.now().toString(), ...newTransaction };
-    setTransactions((prev) => [transaction, ...prev]);
+    try {
+      const updated = await addTransactionApi(dataSource, transactions, transaction);
+      setTransactions(updated);
+    } catch (e) {
+      console.error(e);
+      alert("Failed to add transaction. Is json-server running?");
+    }
   };
 
-  const editTransaction = (id, updatedData) => {
-    setTransactions((prev) => 
-      prev.map(tx => tx.id === id ? { ...tx, ...updatedData } : tx)
-    );
+  const editTransaction = async (id, updatedData) => {
+    try {
+      const updated = await editTransactionApi(dataSource, transactions, id, updatedData);
+      setTransactions(updated);
+    } catch (e) {
+      console.error(e);
+      alert("Failed to edit transaction.");
+    }
   };
 
-  const deleteTransaction = (id) => {
-    setTransactions((prev) => prev.filter(tx => tx.id !== id));
+  const deleteTransaction = async (id) => {
+    try {
+      const updated = await deleteTransactionApi(dataSource, transactions, id);
+      setTransactions(updated);
+    } catch (e) {
+      console.error(e);
+      alert("Failed to delete transaction.");
+    }
   };
 
-  const setPeriodBudget = (period, category, amount) => {
-    setBudgets(prev => ({
-      ...prev,
+  const setPeriodBudget = async (period, category, amount) => {
+    const newBudgets = {
+      ...budgets,
       [period]: {
-        ...(prev[period] || {}),
+        ...(budgets[period] || {}),
         [category]: Number(amount)
       }
-    }));
+    };
+    try {
+      const updated = await syncBudgets(dataSource, newBudgets);
+      setBudgets(updated);
+    } catch (e) {
+      console.error(e);
+      alert("Failed to update budget.");
+    }
   };
 
-  const deletePeriodBudget = (period, category) => {
-    setBudgets(prev => {
-      const currentPeriodBudgets = { ...(prev[period] || {}) };
-      delete currentPeriodBudgets[category];
-      
-      return {
-        ...prev,
-        [period]: currentPeriodBudgets
-      };
-    });
+  const deletePeriodBudget = async (period, category) => {
+    const newBudgets = { ...budgets };
+    const currentPeriodBudgets = { ...(newBudgets[period] || {}) };
+    delete currentPeriodBudgets[category];
+    newBudgets[period] = currentPeriodBudgets;
+    
+    try {
+      const updated = await syncBudgets(dataSource, newBudgets);
+      setBudgets(updated);
+    } catch (e) {
+      console.error(e);
+      alert("Failed to remove budget.");
+    }
   };
 
-  const resetData = () => {
+  const resetData = async () => {
+    if (dataSource !== "local") {
+      alert("Sample reset is only supported in Local Mode. For Mock API, modify db.json manually.");
+      return;
+    }
+    await syncTransactions("local", MOCK_TRANSACTIONS);
+    await syncBudgets("local", DEFAULT_BUDGETS);
     setTransactions(MOCK_TRANSACTIONS);
     setBudgets(DEFAULT_BUDGETS);
   };
@@ -267,8 +324,9 @@ export const FinanceProvider = ({ children }) => {
         setPeriodBudget,
         deletePeriodBudget,
         formatDateDisplay,
-        pieCategoryFilter,
-        setPieCategoryFilter
+        setPieCategoryFilter,
+        dataSource,
+        setDataSource
       }}
     >
       {children}

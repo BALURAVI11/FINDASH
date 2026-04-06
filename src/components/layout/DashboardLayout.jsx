@@ -23,6 +23,8 @@ import {
   MessageSquare,
   Bell,
   Search,
+  Database,
+  Server,
 } from "lucide-react";
 
 // ── Centralized Floating Ball config (spanning entire right pane) ──
@@ -69,6 +71,8 @@ const SidebarContent = ({
   setRole,
   theme,
   toggleTheme,
+  dataSource,
+  setDataSource,
   setModal
 }) => (
   <div
@@ -204,6 +208,16 @@ const SidebarContent = ({
           </div>
 
           <button
+            onClick={() => setDataSource(prev => prev === "local" ? "mock" : "local")}
+            className="w-full flex items-center justify-between bg-white dark:bg-slate-800 px-4 py-3 rounded-2xl border border-sky-400 dark:border-pink-500 shadow-[0_0_15px_rgba(56,189,248,0.3)] dark:shadow-[0_0_15px_rgba(236,72,153,0.3)] hover:shadow-[0_0_20px_rgba(56,189,248,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <span className="text-sm font-bold text-slate-700 dark:text-slate-200 uppercase tracking-widest pl-1">
+              {dataSource === "local" ? "Local DB" : "Mock API"}
+            </span>
+            {dataSource === "local" ? <Database className="w-5 h-5 text-sky-500" /> : <Server className="w-5 h-5 text-pink-500" />}
+          </button>
+
+          <button
             onClick={toggleTheme}
             className="w-full flex items-center justify-between bg-white dark:bg-slate-800 px-4 py-3 rounded-2xl border border-amber-400 dark:border-sky-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] dark:shadow-[0_0_15px_rgba(56,189,248,0.3)] hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
@@ -219,7 +233,7 @@ const SidebarContent = ({
 );
 
 const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
-  const { role, setRole, theme, toggleTheme, isLoading } = useFinance();
+  const { role, setRole, theme, toggleTheme, isLoading, dataSource, setDataSource } = useFinance();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [modal, setModal] = useState(null); // 'contact', 'support', 'help', null
@@ -242,6 +256,8 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
           setRole={setRole} 
           theme={theme} 
           toggleTheme={toggleTheme}
+          dataSource={dataSource}
+          setDataSource={setDataSource}
           setModal={setModal}
         />
 
@@ -290,6 +306,8 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
               setRole={setRole} 
               theme={theme} 
               toggleTheme={toggleTheme}
+              dataSource={dataSource}
+              setDataSource={setDataSource}
               setModal={setModal}
             />
           </aside>
@@ -303,7 +321,7 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
         <header className="hidden md:flex items-center justify-end px-10 h-16 shrink-0 z-20 relative">
           <div className="flex items-center space-x-6">
             {/* Notification Icon */}
-            <button className="relative bg-white/60 dark:bg-slate-800/60 backdrop-blur-md p-2 rounded-2xl border border-emerald-400 dark:border-indigo-500 shadow-[0_0_15px_rgba(52,211,153,0.4)] dark:shadow-[0_0_15px_rgba(99,102,241,0.4)] transition-all hover:shadow-[0_0_25px_rgba(52,211,153,0.6)] dark:hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 group">
+            <button onClick={() => setModal("notification")} className="relative bg-white/60 dark:bg-slate-800/60 backdrop-blur-md p-2 rounded-2xl border border-emerald-400 dark:border-indigo-500 shadow-[0_0_15px_rgba(52,211,153,0.4)] dark:shadow-[0_0_15px_rgba(99,102,241,0.4)] transition-all hover:shadow-[0_0_25px_rgba(52,211,153,0.6)] dark:hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] hover:-translate-y-0.5 group">
               <Bell className="w-5 h-5 text-slate-500 dark:text-slate-400 group-hover:text-emerald-800 dark:group-hover:text-indigo-400 transition-colors" />
               <span className="absolute top-1 right-2 w-2 h-2 bg-rose-500 rounded-full animate-ping" />
               <span className="absolute top-1 right-2 w-2 h-2 bg-rose-500 rounded-full shadow-[0_0_8px_rgba(244,63,94,0.8)]" />
@@ -324,6 +342,43 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
                 <option value="Admin" className="bg-white dark:bg-slate-800">Admin</option>
               </select>
             </div>
+
+            {/* Sync to Mock DB Button */}
+            {dataSource === "local" && (
+              <button
+                onClick={() => {
+                  const tx = localStorage.getItem("dashboard_transactions_v3") || "[]";
+                  const bg = localStorage.getItem("dashboard_budgets_v4") || "{}";
+                  fetch("http://localhost:5005/sync", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ transactions: JSON.parse(tx), budgets: JSON.parse(bg) })
+                  })
+                  .then(res => res.json())
+                  .then(() => alert("Data successfully migrated to db.json! You can now switch to Mock API mode safely."))
+                  .catch(err => alert("Sync Server failed: " + err.message));
+                }}
+                className="group flex items-center space-x-2 bg-indigo-500 dark:bg-indigo-600 text-white px-4 py-2 rounded-2xl shadow-[0_0_15px_rgba(99,102,241,0.4)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] hover:-translate-y-0.5"
+                title="Migrate Local to Mock API"
+              >
+                <div className="flex items-center space-x-2 text-xs font-bold">
+                  <Server className="w-4 h-4 text-white animate-pulse" />
+                  <span className="uppercase tracking-wider text-white">Migrate To Mock API</span>
+                </div>
+              </button>
+            )}
+
+            {/* Database Switcher */}
+            <button
+              onClick={() => setDataSource(prev => prev === "local" ? "mock" : "local")}
+              className="group flex items-center space-x-2 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md px-4 py-2 rounded-2xl border border-sky-400 dark:border-pink-500 shadow-[0_0_15px_rgba(56,189,248,0.4)] dark:shadow-[0_0_15px_rgba(236,72,153,0.4)] transition-all duration-300 hover:shadow-[0_0_25px_rgba(56,189,248,0.6)] dark:hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] hover:-translate-y-0.5"
+              title="Toggle Data Source"
+            >
+              <div className="flex items-center space-x-2 text-xs font-bold text-slate-700 dark:text-slate-200">
+                {dataSource === "local" ? <Database className="w-4 h-4 text-sky-500" /> : <Server className="w-4 h-4 text-pink-500" />}
+                <span className="uppercase tracking-wider">{dataSource === "local" ? "Local DB" : "Mock API"}</span>
+              </div>
+            </button>
 
             {/* Theme Toggle */}
             <button
@@ -484,7 +539,7 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
                   />
                 </div>
 
-                {/* FAQ List */}
+            {/* FAQ List */}
                 <div className="space-y-2 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
                   {[
                     "How can I reset my password?",
@@ -512,6 +567,25 @@ const DashboardLayout = ({ children, activeTab, setActiveTab }) => {
                 <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">Feature In Progress</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 max-w-[280px] mx-auto">
                   Just to let you know, this app is purely a frontend showcase! The backend authentication features (like Logging Out) are not yet developed. Feel free to hold tight as this functionality will be built in the future.
+                </p>
+                <button 
+                  onClick={() => setModal(null)} 
+                  className="w-full bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-bold py-3 px-4 rounded-xl transition duration-200"
+                >
+                  Got it, thanks!
+                </button>
+              </div>
+            )}
+            
+            {modal === "notification" && (
+              <div className="space-y-4 text-center pb-2">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                  <div className="absolute inset-0 rounded-full border-2 border-blue-400 border-dashed animate-spin-slow"></div>
+                  <Bell className="w-8 h-8 text-blue-600 dark:text-blue-400 relative z-10" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">Feature In Progress</h3>
+                <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 max-w-[280px] mx-auto">
+                  Just to let you know, this app is purely a frontend showcase! The backend notification system is not yet developed. Feel free to hold tight as this functionality will be built in the future.
                 </p>
                 <button 
                   onClick={() => setModal(null)} 
